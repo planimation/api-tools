@@ -12,6 +12,7 @@ Method | Description
 ------------ | -------------
 `pddl_visualise(path of domain, path of problem, path of animation, output format)` | Submit 3 pddl files which corresponds to domain, problem, animation profile respectively and receive response in one of 5 supported formats (vfg, png, gif, webm, mp4). Similar to "Build visualisation from problem" on user interface
 `vfg_visualise(path of vfg, output format)` | Submit a vfg file and receive response in one of 4 supported formats (png, gif, webm, mp4). Similar to "Build visualisation from solution VFG" on user interface
+
 An example of usage is demonstrated below:
 ```python
 import planimation_api as api
