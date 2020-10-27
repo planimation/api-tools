@@ -1,6 +1,6 @@
 # Access Planimation API
 
-The Planimation API provides programmatic access to Planimation, an online PDDL problem solver and visualiser. Planimation with user interface can be accessed through [here] [planimation]. A python library and a python-based command line utility are provided to easily access the API. They provide the same functionalities as the user interface.
+The Planimation API provides programmatic access to Planimation, an online PDDL problem solver and visualiser. Planimation with user interface can be accessed through [here]. A python library and a python-based command line utility are provided to easily access the API. They provide the same functionalities as the user interface.
 
 ### Installation
 Simply fork this repository and you can have access to the source code. Unfortunately, there are no `pip` or `conda` installation options available at this stage.
@@ -39,4 +39,4 @@ The API should be considered to be in a very alpha phase at the moment. It's not
 The first version of Planimation API is developed by Changyuan Liu, Lingfeng Qiang, Mengyi Fan, Xinzhe Li and Zhaoqi Fang under Nir Lipovetzky's guidance.
 
 [//]: # 
-   [planimation]:<https://planimation.planning.domains/>
+   [here]:<https://planimation.planning.domains/>
