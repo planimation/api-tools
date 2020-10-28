@@ -1,6 +1,7 @@
 import requests
 from datetime import datetime
 import re
+import json
 
 # To be changed once deployed on actural server
 pddl_url = "http://127.0.0.1:8000/upload/(?P<filename>[^/]+)$"
@@ -35,7 +36,11 @@ def pddl_visualise(domain_file, problem_file, animation_profile, output_format):
     animation = read_file(animation_profile)
     files = ("domain", (None, domain)), ("problem", (None, problem)), ("animation", (None, animation)), \
             ("fileType", (None, output_format))
+    print("Waiting for response...")
     r = requests.post(pddl_url, files=files)
+    if "message" in r.text:
+        message = json.loads(r.text)
+        return message['message']
     if output_format == "png":
         output_format = "zip"
     output_name = "planimation " + datetime.now().strftime("%Y-%m-%d_%X.") + output_format
@@ -55,7 +60,11 @@ def vfg_visualise(vfg_file, output_format):
         return None
     vfg = read_file(vfg_file)
     files = ('vfg', (None, vfg)), ('fileType', (None, output_format))
+    print("Waiting for response...")
     r = requests.post(vfg_url, files=files)
+    if "message" in r.text:
+        message = json.loads(r.text)
+        return message['message']
     if output_format == "png":
         output_format = "zip"
     output_name = "planimation " + datetime.now().strftime("%Y-%m-%d_%X.") + output_format

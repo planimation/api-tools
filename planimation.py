@@ -26,22 +26,22 @@ if __name__ == "__main__":
 				if vfg.endswith('.vfg'):
 					i+=1
 					downloadtype = sys.argv[i].strip()
-					
+
 					if downloadtype!='png' and downloadtype!='webm' and downloadtype!='gif' and downloadtype!='mp4':
-						print("invalid download type")
+						print("Error: desired output format is not supported; only png, gif, webm and mp4 are supported")
 						exit(1)
 					else:
-						print(vfg)
-						print(downloadtype)
-						api.vfg_visualise(vfg,downloadtype)
+						#print(vfg)
+						#print(downloadtype)
+						print(api.vfg_visualise(vfg,downloadtype))
 						exit(0)
 				else:
-					print("Invalid vfg file type")
+					print("Error: incorrect input format; input should be in vfg format")
 					exit(1)
 			else:
-				print("Invalid argument entered for submitVFG")
+				print("Error: incorrect number of arguments entered for submitVFG")
 				exit(1)
-		# check submitPlan function 		
+		# check submitPlan function
 		elif sys.argv[i] == "submitPDDL":
 			i+=1
 			if len(sys.argv) == 6:
@@ -54,20 +54,20 @@ if __name__ == "__main__":
 					i+=1
 					downloadtype = sys.argv[i].strip()
 					if downloadtype!='png' and downloadtype!='webm' and downloadtype!='gif' and downloadtype!='mp4' and downloadtype!='vfg':
-						print("invalid download type")
+						print("Error: desired output format is not supported; only vfg, png, gif, webm and mp4 are supported")
 						exit(1)
 					else:
-						api.pddl_visualise(domainFile,problemFile,animationFile,downloadtype)
+						print(api.pddl_visualise(domainFile,problemFile,animationFile,downloadtype))
 						exit(0)
 
 				else:
-					print("invalid input for pddls,please check your pddl files")
+					print("Error: incorrect input format; all input files should be in pddl format")
 					exit(1)
 
 			else:
-				print("Invalid argument numbers entered for submitPlan")
+				print("Error: incorrect number of arguments numbers entered for submitPDDL")
 				exit(1)
 
 		else:
-			print("no such argument input!!!")
+			print("Error: no such command " + "'" + sys.argv[1] + "'")
 			exit(1)

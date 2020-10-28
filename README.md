@@ -17,7 +17,7 @@ An example of usage is demonstrated below:
 ```python
 import planimation_api as api
 result = api.pddl_visualise("domain.pddl", "problem.pddl", "ap.pddl", "mp4")
-print(result) // display the name of received file
+print(result) # display the name of the received file or an error message
 ```
 
 ### Command Line Utility
@@ -39,5 +39,5 @@ The API should be considered to be in a very alpha phase at the moment. It's not
 ### Thanks
 The first version of Planimation API is developed by Changyuan Liu, Lingfeng Qiang, Mengyi Fan, Xinzhe Li and Zhaoqi Fang under Nir Lipovetzky's guidance.
 
-[//]: # 
+[//]: #
    [here]:<https://planimation.planning.domains/>
