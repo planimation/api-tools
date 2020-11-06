@@ -33,8 +33,12 @@ $ planimation.py submitPDDL [path of domain] [path of problem] [path of animatio
 $ planimation.py submitVFG  [path of VFG] [output format]                
 ```
 
-### Disclaimer
-The API should be considered to be in a very alpha phase at the moment. It's not expected to handle heavy traffic and the error messages may not be complete. Until this disclaimer is removed, we **DO NOT RECOMMEND** using the API for official business (academic or otherwise).
+### Note for developer
+The urls in `planimation_api.py` need to be changed to the actual urls in use.
+https://github.com/changyuanl/planimation-pythonAPI/blob/2709762ccd9eacf9955fbd1abab1d22419704033/planimation_api.py#L6-L8
+
+### Warning
+A malicious or careless user can easily spam requests using the python library and there is no mechanism at the server to handle such situation. Until relevant mechanism is implemented, it may not be safe to publish this python library.
 
 ### Thanks
 The first version of Planimation API is developed by Changyuan Liu, Lingfeng Qiang, Mengyi Fan, Xinzhe Li and Zhaoqi Fang under Nir Lipovetzky's guidance.
