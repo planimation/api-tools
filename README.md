@@ -35,7 +35,7 @@ $ planimation.py submitVFG  [path of VFG] [output format]
 
 ### Note for developer
 The urls in `planimation_api.py` need to be changed to the actual urls in use.
-https://github.com/changyuanl/planimation-pythonAPI/blob/2709762ccd9eacf9955fbd1abab1d22419704033/planimation_api.py#L6-L8
+https://github.com/planimation/api-tools/blob/bac3d948ffb7f0ceb6de389bf8f7dc38e57328be/planimation_api.py#L6-L8
 
 ### Warning
 A malicious or careless user can easily spam requests using the python library and there is no mechanism at the server to handle such situation. Until relevant mechanism is implemented, it may not be safe to publish this python library.
